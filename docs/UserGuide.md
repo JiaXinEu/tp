@@ -477,6 +477,7 @@ Format: `setweak g/GRADE`
 
 * `GRADE` should be one of the valid grades: **[A+, A, A-, B+, B, B-, C+, C, D+, D, F]**.
 * After setting the threshold with the command, the weak marker will be maintained even after shutting down the application.
+* Do note that the `setweak` command does not affect archived students. This means weak labels on archived students will not be changed.
 
 Example:
 * `setweak g/B` displays a weak marker for all students with grade B or lower.
@@ -501,6 +502,7 @@ Format: `summary`
 * The new window contains statistics: Total Students, Average Grade, and Standard Deviation of Grades.
 * It also contains a pie chart of students' grades.
   * If there are 0 students, the pie chart does not display.
+* Do note that the `summary` command does not consider archived students.
 
 Displayed after the command: `summary`
 
