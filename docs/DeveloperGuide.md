@@ -13,8 +13,7 @@ title: Developer Guide
 ## **Acknowledgements**
 
 * The **CS2103T teaching team** for providing us with the [base project](https://github.com/nus-cs2103-AY2324S2/tp) that Teachstack builds upon, as well as for their invaluable guidance throughout this project's development. 
-* **Any other libaries or 3rd-party code**  already used in the [base project](https://github.com/nus-cs2103-AY2324S2/tp). (see link for details) <br>
-
+* __Any other libaries or 3rd-party code__  already used in the [base project](https://github.com/nus-cs2103-AY2324S2/tp). (see link for details) <br>
 * The idea for **clickable email** was inspired from a similar feature in project [CodeConnect](https://github.com/AY2324S2-CS2103T-T12-1/tp). 
 --------------------------------------------------------------------------------------------------------------------
 
