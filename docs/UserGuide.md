@@ -615,7 +615,7 @@ Displayed after the command: `summary`
 | **Group**         | `group gp/GROUP_NAME id/STUDENT_ID_1 [id/STUDENT_ID_2] ...` <br> e.g., `group gp/Group 1 id/A1234567R, id/A2345678R`                |
 | **Random Group**  | `random NUMBER_OF_GROUPS gp/GROUP_NAME` <br> e.g., `random 3 gp/Random Group`                                                       |
 | **Weak**          | `setweak g/GRADE` <br> e.g., `setweak g/B`                                                                                          |
-| **Filter Group**  | `find gp/GROUP_NAME` <br> e.g., `find gp/Group 1`                                                                                   |
+| **Filter Group**  | `find gp/GROUP_NAME ...` <br> e.g., `find gp/Group 1`                                                                               |
 | **Summary**       | e.g., `summary` <br>                                                                                                                |
 | **Archive**       | `archive STUDENT_ID` <br> e.g., `archive A0123459X`                                                                                 |
 | **Unarchive**     | `unarchived STUDENT_ID` <br> e.g., `unarchived A0123459X`                                                                           |
