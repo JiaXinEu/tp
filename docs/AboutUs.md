@@ -17,8 +17,8 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](https://github.com/JiaXinEu)]
 [[portfolio](team/jiaxineu.md)]
 
-* Role: Project Advisor
-
+* Role: Developer
+* Responsibilities: Testing
 
 ### Yashma Sonara
 
@@ -28,7 +28,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[github](https://github.com/yashma-sonara)]
 [[portfolio](team/johndoe.md)]
 
-* Role: Team Lead
+* Role: Developer
 * Responsibilities: UI
 
 

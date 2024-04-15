@@ -608,7 +608,7 @@ Displayed after the command: `summary`
 
 | Action          | Format, Examples                                                                                                                    |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **Add**         | `add id/STUDENT_ID n/NAME e/EMAIL g/GRADE [gp/GROUP]...` <br> e.g., `add id/A0123459X n/James Doe e/e0123456@u.nus.edu g/A`         |
+| **Add**         | `add id/STUDENT_ID n/NAME e/EMAIL g/GRADE [gp/GROUP_NAME]...` <br> e.g., `add id/A0123459X n/James Doe e/e0123456@u.nus.edu g/A`    |
 | **Delete**      | `delete STUDENT_ID`<br> e.g., `delete A0123456X`                                                                                    |
 | **Edit**        | `edit STUDENT_ID [id/STUDENT_ID] [n/NAME] [e/EMAIL] [g/GRADE] [gp/GROUP_NAME]...` <br> e.g.,`edit A0123466C g/A+`                   |
 | **View**        | `view STUDENT_ID`<br> e.g., `view A0123466D`                                                                                        |
