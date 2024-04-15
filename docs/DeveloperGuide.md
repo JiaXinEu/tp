@@ -13,8 +13,9 @@ title: Developer Guide
 ## **Acknowledgements**
 
 * The **CS2103T teaching team** for providing us with the [base project](https://github.com/nus-cs2103-AY2324S2/tp) that Teachstack builds upon, as well as for their invaluable guidance throughout this project's development. 
-* __Any other libaries or 3rd-party code__  already used in the [base project](https://github.com/nus-cs2103-AY2324S2/tp). (see link for details) <br>
-* The idea for **clickable email** was inspired from a similar feature in project [CodeConnect](https://github.com/AY2324S2-CS2103T-T12-1/tp). 
+* The idea for **clickable email** was inspired from a similar feature in project [CodeConnect](https://github.com/AY2324S2-CS2103T-T12-1/tp).
+* __Any other libaries or 3rd-party code__  already used in the [base project](https://github.com/nus-cs2103-AY2324S2/tp). (see link for details)
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## **Setting up, getting started**
@@ -198,7 +199,7 @@ Note that `p0` still retains the original group, group 3.
 
 ![GroupState3](images/GroupState3.png)
 
-#### Design considerations:
+#### Design Considerations
 
 **Aspect: Whether to allow partial success of command
 (i.e. successfully add some students even if only some provided IDs are valid)**
@@ -290,7 +291,7 @@ The following activity diagram summarizes what happens when a user executes a de
 ![DeleteActivityDiagram](images/DeleteActivityDiagram.png)
 
 
-#### Design considerations:
+#### Design Considerations
 
 **Aspect: Allow deletion of all `Person` added or only those displayed**
 
@@ -340,7 +341,7 @@ Here is the sequence diagram which shows the overall flow:
 
 </div>
 
-#### Design considerations:
+#### Design Considerations
 
 **Aspect: Which model attribute to use for find**
 
@@ -389,7 +390,7 @@ The following activity diagram summarizes what happens when a user executes a ra
 
 ![RandomActivityDiagram](images/RandomActivityDiagram.png)
 
-#### Design considerations:
+#### Design Considerations
 
 **Aspect: Allow forming groups if number of weak students is equals to the group number specified**
 
