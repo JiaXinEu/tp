@@ -147,7 +147,7 @@ The `Model` component,
 
 The `Storage` component,
 * can save both address book data and user preference data in JSON format, and read them back into corresponding objects.
-* inherits from both `AddressBookStorage`, `ArchivedBookStorage`, `UserDataStorage` and `UserPrefStorage`, which means it can be treated as any one (if only the functionality of only one is needed).
+* inherits from `AddressBookStorage`, `ArchivedBookStorage`, `UserDataStorage` and `UserPrefStorage`, which means it can be treated as any one (if only the functionality of only one is needed).
 * depends on some classes in the `Model` component (because the `Storage` component's job is to save/retrieve objects that belong to the `Model`)
 
 ### Common classes
@@ -528,7 +528,7 @@ Given below is the sequence diagram for `edit_archived` command:
 
 The delete_archived feature is similar to the delete feature. However, delete_archived is only applicable to delete students in the archived list.
 
-Given below is an example usage scenario of `delete_archived` feature:
+Given below is an example usage scenario:
 
 Step 1. The user has added some students to `UniquePersonList` of the archived list.
 
@@ -552,6 +552,8 @@ Given below is the sequence diagram for `delete_archived` command:
 
 ### Set Weakness Threshold Feature
 
+#### Implementation 
+
 This is a new command to designate students as being "weak" or not based on their grades. `thresholdGrade` is a value 
 within `Grade`. This does not affect students who have been archived.<br>
 
@@ -571,13 +573,14 @@ The below sequence diagram displays the interactions while executing the command
 
 ### Summary Statistics Feature
 
+#### Implementation
+
 This is a new command to view summary statistics of all students.
-Entering the command `summary` results in a popup window in the gui. The popup window consists of summary data including total
+Entering the command `summary` results in a popup window in the GUI. The popup window consists of summary data including total
 number of students, mean grade, and standard deviation of grades. Additionally, a colored pie chart is displayed of the
 students' grade distribution.
 
-Implementation:
-The `summary` command is implemented as such: 
+Given below is an example usage scenario:
 
 - `LogicManager`'s execute method calls the `parseCommand` method from `AddressBookParser`
 - `parseCommand` creates a `SummaryCommand`
@@ -1088,7 +1091,8 @@ testers are expected to do more *exploratory* testing.
 
 Team Size: 5
 
-1. Ensure that the archive bar as well as the summary statistics component follow the UI theme, i.e. dark background in dark theme.
+1. Ensure that the archive bar follows the UI theme, i.e. dark background in dark theme.
+2. Ensure that the summary statistics component follows the UI theme, i.e. dark background in dark theme.
 2. Provide ability to view archived students.
 3. Expand the characters accepted for name to include special characters like 's/o' ,'-' etc.
 4. Allow for more strength indicators (weak, strong etc.) with threshold setting commands.
@@ -1097,4 +1101,4 @@ Team Size: 5
 7. Allow users to remove a group with a command. This will make it easier for users to create temporary groups which need to be cleared.
 8. Expand color scheme of summary window. This will make it grades easy to differentiate on the pie chart.
 9. Ensure aspects of UI (scrollbar, etc.) are clearly visible in both color themes, and minimized window.
-10. Allow for importing of data from other formats (excel, csv. etc.).
+
