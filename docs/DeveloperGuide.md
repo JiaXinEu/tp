@@ -575,6 +575,8 @@ The below sequence diagram displays the interactions while executing the command
 
 ### Save user data feature
 
+#### Implementation
+
 To make the application more user-friendly, we have implemented a feature which allows certain user data such as `thresholdGrade` and the previous filter applied by the `find` command to be saved in between sessions (i.e. after shutting down the application).
 
 The main classes behind this feature are `JsonUserDataStorage`, `JsonSerializableUserData` and `JsonAdaptedField`. The storage classes function much like the storage for the address book and archived book, while `JsonAdaptedField` handles the user data, or fields, to be saved.
