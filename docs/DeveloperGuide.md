@@ -340,6 +340,8 @@ Here is the sequence diagram which shows the overall flow:
 
 </div>
 
+#### Design considerations:
+
 **Aspect: Which model attribute to use for find**
 
 * **Alternative 1 (current choice):** Filter by `Group`
