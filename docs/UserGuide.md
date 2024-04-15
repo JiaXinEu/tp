@@ -6,18 +6,20 @@ title: User Guide
 
 <img src="images/teachstack.png" alt="TeachStack Logo" style="width: 50%;">
 
-Welcome to TeachStack!
+# Welcome to TeachStack!
 
-At TeachStack, our mission is simple: to ensure every computer science student receives the support they need to succeed.
-Designed specifically for Command Line Interface (CLI) users like you, TeachStack is an intuitive and
-customizable application that empowers instructors to actively manage their students through group-building features,
-archiving, and strength categorization.
+At **TeachStack**, our mission is simple: to ensure every computer science instructor is able to provide the support their students need.
+As enrollment in computer science courses continues to rise, the demand for effective teaching tools has never been greater.
+Designed specifically for *Command Line Interface (CLI) users* like you, TeachStack is an intuitive and
+customizable application that empowers instructors to actively manage their students through **group-building features,
+archiving, and strength categorization**.
 
-Join us on this journey of educational excellence with TeachStack. Together, let's empower students and elevate the standard of computer science education.
+Join us on this journey of educational excellence with TeachStack. **With TeachStack, let's empower instructors and elevate the standard of computer science education.**
 
 Happy teaching!
 
 ## Table of contents
+- [TeachStack](#welcome-to-teachstack)
 - [Table of Contents](#table-of-contents)
 - [1. Welcome](#1-welcome)
 - [2. How to use this user guide](#2-how-to-use-the-user-guide)
@@ -104,6 +106,8 @@ The explanation of each command will be formatted in the following convention:
 ## 3. Target user/audience
 
 TeachStack is tailored for computer science instructors, currently only for those in NUS.
+This is due to our constraints on email, studentID, grading scheme format. 
+
 
 ## 3.1 Assumptions
 1. We assume that users are passionate educators who wish to see their students succeed. This is important as TeachStack mainly allows instructors to track the performance of weaker students, so the application can only demonstrate its full potential in the hands of instructors who care.
@@ -198,7 +202,9 @@ and ensure optimal utilization of the application's capabilities.
 
 ### 7.1 Viewing help : `help`
 
-Shows a message explaining how to access the help page.
+Shows a message explaining how to access the help page. 
+
+Don't worry about saving this user guide, as this link will lead you back here!
 
 ![help message](images/helpMessage.png)
 
@@ -252,6 +258,7 @@ Format: `edit STUDENT_ID [id/STUDENT_ID] [n/NAME] [e/EMAIL] [g/GRADE] [gp/GROUP_
 * `GRADE` should be one of the valid grades: **[A+, A, A-, B+, B, B-, C+, C, D+, D, F]**.
 * Editing `GROUP` will overwrite existing `GROUP` entries.
 * Use of `GROUP` prefix `gp/` in an edit command without specifying `GROUP_NAME` will clear all existing `GROUP` of the student.
+* This command will not apply to a student who is archived. In order to edit an archived student, look at the [`edit_archived`](#7102-editing-an-archived-student--editarchived) command.
 
 Examples:
 *  `edit A0123459X e/e0123450@u.nus.edu` Edits the email address of the person with student_id = A0123459X to be `e0123450@u.nus.edu`.
@@ -284,6 +291,7 @@ Format: `delete STUDENT_ID`
 * The `STUDENT_ID` refers to the id corresponding to the student in the list.
 * The `STUDENT_ID` is case-sensitive, must be a String starting with ‘A’ and ending with any letter, with a total length of 9
 * The student with the specified `STUDENT_ID` must exists in the list.
+* This command will not apply to a student who is archived. In order to delete an archived student, look at the [`delete_archived`](#7103-deleting-an-archived-student--deletearchived) command.
 
 
 Examples:
@@ -461,16 +469,19 @@ Sets the weakness threshold for a weak marker.
 
 Format: `setweak g/GRADE`
 
-* By default, weakness threshold is set at Grade: C+
-* Updates weakness threshold value
-* Students with grade lower or equal to threshold grade appear with a marker in the UI
+* By default, weakness threshold is set at Grade: `C+`
+* The command updates the weakness threshold value.
+* Students with grade lower than or equal to the threshold grade appear with a marker in the UI. Look at the below image to see an example.
+  
+<img src="images/weak_label.png" alt="Weak Label" width="200">
+
 * `GRADE` should be one of the valid grades: **[A+, A, A-, B+, B, B-, C+, C, D+, D, F]**.
-* After setting the threshold, it will be maintained even after shutting down the application.
+* After setting the threshold with the command, the weak marker will be maintained even after shutting down the application.
 
 Example:
 * `setweak g/B` displays a weak marker for all students with grade B or lower.
 
-Default Weakness Threshold
+Before command (Default Weakness Threshold)
 
 ![](images/setWeakBefore.png)
 
@@ -478,17 +489,21 @@ After command `setweak B`
 
 ![](images/setWeakAfter.png)
 
+Dorian Grey now has a weak marker which was not there previously, as we just changed the weak threshold to `B`.
+
 ### 7.15 Viewing summary statistics : `summary`
 
 Displays a summary of all students.
 
 Format: `summary`
 
-* Entering command opens a popup.
-* Popup contains statistics: Total Students, Average Grade, and Standard Deviation of Grades.
-* Popup contains pie chart of students' grades.
+* Entering the command opens a popup window.
+* The new window contains statistics: Total Students, Average Grade, and Standard Deviation of Grades.
+* It also contains a pie chart of students' grades.
+  * If there are 0 students, the pie chart does not display.
 
-Displayed after command: `summary`
+Displayed after the command: `summary`
+
 ![](images/summary.png)
 
 --------------------------------------------------------------------------------------------------------------------
@@ -525,7 +540,7 @@ Displayed after command: `summary`
 **Q**: Is TeachStack suitable for Teaching Assistants (TAs)?<br>
 **A**: While TeachStack is currently tailored for computer science instructors to simplify managing large student bodies, TAs may also find our app useful, especially in scenarios with larger class sizes. We continually strive to expand TeachStack's capabilities to better serve the diverse needs of educators and teaching teams.
 
-**Q**: Is TeachStack really better than Canvas, Excel, etc. for me?
+**Q**: Is TeachStack really better than Canvas, Excel, etc. for me?<br>
 **A**: Yes! While the other platforms do offer valuable features, TeachStack stands out with its CLI, intuitive group forming, archiving, and other tailored features designed specifically for computer science educators. What sets TeachStack apart is our commitment to continuous improvement and development, driven by your feedback. With ongoing enhancements, we're dedicated to ensuring TeachStack remains the preferred choice for instructors seeking to elevate their teaching experience.
 
 ### 9.2 Using TeachStack
@@ -533,10 +548,10 @@ Displayed after command: `summary`
 **Q**: How do I transfer my data to another computer?<br>
 **A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous TeachStack home folder.
 
-**Q**: I made changes to the data files manually and I am now facing errors! What should I do?
+**Q**: I made changes to the data files manually, and I am now facing errors! What should I do?<br>
 **A**: We recommend that you only manually edit the files if you are confident that you can update it correctly. In the event that you run into errors after manually editing the files, please delete the `[JAR file location]/data` folder so TeachStack can create new files.
 
-**Q**: Do I have to save my changes manually?
+**Q**: Do I have to save my changes manually?<br>
 **A**: No, TeachStack will automatically save any changes you have made after a command is entered.
 --------------------------------------------------------------------------------------------------------------------
 
