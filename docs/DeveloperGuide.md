@@ -571,6 +571,31 @@ The below sequence diagram displays the interactions while executing the command
 
 ![SetWeakSequenceDiagram](images/SetWeakSequenceDiagram.png)
 
+
+
+
+### Save user data feature
+
+To make the application more user-friendly, we have implemented a feature which allows certain user data such as `thresholdGrade` and the previous filter applied by the `find` command to be saved in between sessions (i.e. after shutting down the application).
+
+The main classes behind this feature are `JsonUserDataStorage`, `JsonSerializableUserData` and `JsonAdaptedField`. The storage classes function much like the storage for the address book and archived book, while `JsonAdaptedField` handles the user data, or fields, to be saved.
+
+Given below is an example usage scenario for setting the weak threshold grade:
+
+Step 1. The user executes `setweak g/B`.
+
+Step 2. The `SetWeakThresholdCommand` object calls `Grade#modifyThreshold(newThreshold)`, which in turn invokes `JsonSerializableUserData#setGradeThreshold(newThreshold)`.
+
+Step 3. As with the other storage classes, the new `thresholdGrade` will be saved in the `userdata.json` file automatically.
+
+Step 4. The user shuts down the application.
+
+Step 5. Upon relaunching, `JsonUserDataStorage` will read the JSON file and update the relevant field to the saved value.
+
+In the future, we hope to add more functionality to this feature, such as saving the preferred UI theme.
+
+
+
 ### Summary Statistics Feature
 
 #### Implementation
